@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "twitter-data-science",
+  "private_key_id": "b03af3bec1973a2e155ecf418fb77c4adc31a8fd",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCglpXJTwgi9VB+\nzxUIHycx2pAjFXj59f0kz+G3Ry+kk7nY4fbfiLOQX1noFYFXigIp9+7uu3Joj43t\n1yZxqB2YvyPkWeEnXCtw1vGm1nBX3jTlYjIm7OCV9ANQmeolgyTeozvpmAbhdmrQ\nW7gN/ilnvtN0PWceAA0Cg366MZKr3mf61nNuNyArwePgZg+5XW1okVNVmc8rD9Q6\njUpqVT61quYX8nBxdd0s6zsC6+8lnAefdmnUX63TQEuXJslANF6GuwwpFyubARsJ\njBbqGonziY9gQ+MoBArX4/As8ezIlt5qOHP9AW5YB0jrAP1Jc3btQ2+6LK31M50z\nxeFGEKpRAgMBAAECggEADUOdjU+oVI7eU7hnZyYqQXK+m2SU0KdR/fOSaWY0ArbV\npRrg88y28YgBWpXwJYViMV+SY4ilu1+Oxw7m1NYgf7MwqUCymWLXubh0pFBWXi5I\nleEa/bPCHHtXt2rHIssRcAxGkMBRt9dlR4l+izVWQS9LXZthbuJtMKsg0WCdL0c2\nyNFRT5Ojq/UZi9xh76BdnGoXiKKaIfmGkWqNAczEi8KymmePPGOKOSL9X4AYNMTd\nTmuDPpeED46HSUyx9ZyWh0rVXu+I0sC1D3qkg/KoMpLb2kKu0ZJDInFv1Vo8V5L9\nXV47FiiSJfWprNgOjXRacak/a1KHQjIeww4r2jWqWQKBgQDamnCekTWGcrkRp4Sj\nqYiU/lLAdGSn1exPCDySvUq0pYdRj5IVo6kfG03bEWX6QdF3g7ZhleH6Fi1eOVSI\neg83woVZoBhsG/wuuha6krSAuv0KjBJV+p25bjAh4wE1pbo7y7ubuTWz1B7dt5LT\nirkk5hUWwP9NgRqMjqbwgzJtVQKBgQC8D2vGvmUVWwNHqoTZfMk5U7E4WhZyypbM\n9w18zel1OL5VkwBkdDUmdS+iDOYnm/F/G/SrHPbhgYlu0CacILkXGkevMDVr1Kvx\np0k4v/QIEzGANla4JV00Xae/v6OgwJrOucdQ85zM4QDgzuJdWRn/RCWyemvQdEjx\nQCG6KQSpDQKBgCXPBmF2jgJl/zpddeR0ownZ/ugIeYxJxKharVdX4/7gjkn+Ae86\nMjsOFuYn2TJyhc8c+cNhEAeYJFqioctFCTLEsxmwRekU4gYW621ziEKnlLJpTZaP\nVQ5IT4zc3U2xD0feUeF6JB6pNnl0kbGC0cje/pDD6qQ2Cyh6V8dLecJNAoGACgAT\n7hyfyXPuh7gUmnAdTzQZH3MC8JW/USTuDa3xdS9QR8Kqaa0YSnQ+1TI0ZvTO8cBt\n0U+X/UPjKAZflzvSO91E5Jb+sD496nrH1QG4G1nR7wx0rhQmkatNSVAKhnjXgpi0\ndaSOuQJaBppZxTcAv+dCzeveodYdLt8HLBwUSF0CgYAD5S/J8ystiYwuVk+5dNtj\n9ojA2tS2/i2qV2XdLzN2tgdrkvcksFH75FNAfbiWxZdMFDBk4WFvx9yiTFOiHbPC\nset+z3wOp6gFYhoYNdXLW1Qaqy8+H2KylsDqF2Pjc5DfLrhkfZ660YhNz7AmwNQO\nZfmgYlRRH+9V+PnxJ/v99g==\n-----END PRIVATE KEY-----\n",
+  "client_email": "datastore@twitter-data-science.iam.gserviceaccount.com",
+  "client_id": "114360360033019293066",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/datastore%40twitter-data-science.iam.gserviceaccount.com"
+}
