@@ -46,12 +46,10 @@ function analyzeTweet(event) {
   language_client.analyzeSentiment({document: document}).then(results => {
     const sentiment = results[0].documentSentiment || null;
     language_client.analyzeEntities({document: document}).then(results => {
-      const entities = results[0].entities.map(function(e) {
-        return {
-          name: e.name,
-          type: e.type,
-          salience: e.salience};
-      });
+      const entity = results[0].entities.sort(function(a, b) {
+        return b.salience - a.salience;
+      })[0];
+
       const tweet = {
         created_at: event.created_at,
         id: event.id,
@@ -61,7 +59,9 @@ function analyzeTweet(event) {
         place: event.place,
         sentiment_score: sentiment.score || 0,
         sentiment_magnitude: sentiment.magnitude || 0,
-        entities: entities
+        entity: entity.name,
+        entity_type: entity.type,
+        entity_salience: entity.salience,
       };
       saveTask(tweet);
     }).catch(err => {
@@ -73,7 +73,7 @@ function analyzeTweet(event) {
 }
 
 function saveTask(tweet) {
-  table.insert({tweet: JSON.stringify(tweet)})
+  table.insert(tweet)
   .then(function(data) {
     var apiResponse = data[0];
     console.log(apiResponse);
