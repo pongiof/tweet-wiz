@@ -4,5 +4,7 @@
 	"twitter_access_key": "54891752-ZaMi27xUYKbDfUmzB9xCRQcy9YfIiOCEBTcBOT4Fd",
 	"twitter_access_secret": "C2hUpy9fnRtqZEPmyrHy2d6cq5RmPC541fZ9gc8KVxMhd",
 	"project_id": "twitter-data-science",
+	"bigquery_dataset": "twitter",
+	"bigquery_table": "tweets",
 	"searchTerms": "salvini,mattarella,di maio,m5s,renzi,berlusconi"
 }

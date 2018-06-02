@@ -1,3 +1,4 @@
+const BigQuery = require('@google-cloud/bigquery');
 const Datastore = require('@google-cloud/datastore');
 const language = require('@google-cloud/language');
 const Twitter = require('twitter');
@@ -7,12 +8,13 @@ const language_client = new language.LanguageServiceClient({
   keyFilename: './datastore.json'
 });
 
-const datastore = new Datastore({
+const bigquery = new BigQuery({
   projectId: config.project_id,
   keyFilename: './datastore.json'
 });
-
-
+const table = bigquery
+  .dataset(config.bigquery_dataset)
+  .table(config.bigquery_table);
 
 const client = new Twitter({
   consumer_key: config.twitter_consumer_key,
@@ -50,21 +52,18 @@ function analyzeTweet(event) {
           type: e.type,
           salience: e.salience};
       });
-      const task = {
-        key: datastore.key(['Tweet', event.id]),
-        data: {
-          created_at: event.created_at,
-          id: event.id,
-          text: event.text,
-          geo: event.geo,
-          coordinates: event.coordinates,
-          place: event.place,
-          sentiment_score: sentiment.score || 0,
-          sentiment_magnitude: sentiment.magnitude || 0,
-          entities: entities
-        },
+      const tweet = {
+        created_at: event.created_at,
+        id: event.id,
+        text: event.text,
+        geo: event.geo,
+        coordinates: event.coordinates,
+        place: event.place,
+        sentiment_score: sentiment.score || 0,
+        sentiment_magnitude: sentiment.magnitude || 0,
+        entities: entities
       };
-      saveTask(task);
+      saveTask(tweet);
     }).catch(err => {
       console.error('ERROR:', err);
     })
@@ -73,10 +72,14 @@ function analyzeTweet(event) {
   })
 }
 
-function saveTask(task) {
-  datastore.save(task).then(() => {
-    console.log(task.data);
-  }).catch(err => {
-    console.error('ERROR:', err);
+function saveTask(tweet) {
+  table.insert({tweet: JSON.stringify(tweet)})
+  .then(function(data) {
+    var apiResponse = data[0];
+    console.log(apiResponse);
+    console.log(tweet);
+  })
+  .catch(function(err) {
+    console.log(err);
   });
 }
